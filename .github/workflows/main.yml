@@ -1,0 +1,29 @@
+name: Scrape Data
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+
+jobs:
+  scrape_data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Set up Chrome browser
+        uses: nanorepublica/setup-chrome@v1
+
+      - name: Scrape data
+        run: python scrape_data.py
+        env:
+          DISPLAY: ":99"
+          CHROME_BIN: "/usr/bin/google-chrome"
