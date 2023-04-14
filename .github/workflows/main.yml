@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
   schedule:
    # - cron: "16 3,4,5,6,7 * * 1-5" # 9:16 AM - 9:46 AM IST from Monday to Friday
-    - cron: '35 0 15 4 *'
+    - cron: '11 19 14 4 *'
 
 permissions:
   contents: read
