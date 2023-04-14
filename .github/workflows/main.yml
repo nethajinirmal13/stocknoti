@@ -25,8 +25,8 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Set up Chrome browser
-        uses: webfactorygmbh/install-chrome-action@v1
-
+        uses: chromium-actions/setup-chromium@v1
+        
       - name: Scrape data
         run: python scap.py
         env:
