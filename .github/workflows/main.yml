@@ -2,7 +2,7 @@ name: Scrape Data
 
 on:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/2 * * * *'
 
 jobs:
   scrape_data:
