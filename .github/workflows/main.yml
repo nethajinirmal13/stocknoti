@@ -26,9 +26,9 @@ jobs:
 
       - name: Install dependencies
         run: pip install -r requirements.txt
-
-      - name: Set up Chrome browser
-        uses: GoogleChrome/puppeteer@latest
+        
+      - uses: browser-actions/setup-chrome@v1
+      - run: chrome --version
         
       - name: Scrape data
         run: python scap.py
