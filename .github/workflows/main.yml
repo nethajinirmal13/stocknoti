@@ -23,7 +23,7 @@ jobs:
         uses: nanorepublica/setup-chrome@v1
 
       - name: Scrape data
-        run: python scrape_data.py
+        run: python scap.py
         env:
           DISPLAY: ":99"
           CHROME_BIN: "/usr/bin/google-chrome"
