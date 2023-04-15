@@ -5,8 +5,9 @@ name: Scrape Data
 on:
   workflow_dispatch:
   schedule:
-   - cron: "16 3,4,5,6,7 * * 1-5" # 9:16 AM - 9:46 AM IST from Monday to Friday
-   # - cron: '* 15 * * * '
+   #- cron: "16 3,4,5,6,7 * * 1-5" # 9:16 AM - 9:46 AM IST from Monday to Frida
+   - cron: "*/5 * * * *"
+
 
 permissions:
   contents: read
